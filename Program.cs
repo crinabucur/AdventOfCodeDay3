@@ -38,10 +38,8 @@
 
     private static int GetItemPriority(char item)
     {
-        // a = 97  => 1 (-96)
-        // z = 122 => 26 (-96)
-        // A = 65  => 27 (-38)
-        // Z = 90  => 52 (-38)
+        // a = 97 =>  1; z = 122 => 26 (-96)
+        // A = 65 => 27; Z = 90  => 52 (-38)
         var value = (int)item;
         return value > 90 ? value - 96 : value - 38;
     }
